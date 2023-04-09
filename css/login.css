@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container-fluid{
+    height: 100vh;
+    position: absolute;
+
+} 
+#particles-js{ 
+    height:100vh;
+    background-image: url('/images/mainBack.jpg');
+    background-repeat: no-repeat;
+    background-size:cover; 
+    background-position: center center;
+    background-attachment: fixed;
+    overflow-y:auto;
+
+}
+::-webkit-scrollbar{
+    display: none;
+}
+::-moz-scrollbar{
+    display: none;
+}

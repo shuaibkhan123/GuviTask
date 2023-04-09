@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container-fluid{
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+} 
+#particles-js{
+    height:100vh;
+    background-image: url('/images/mainBack.jpg');
+    background-repeat: no-repeat;
+    background-size:cover; 
+    background-position: center center;
+    background-attachment: fixed;
+    overflow-y:auto;
+
+}
+::-webkit-scrollbar{
+    display: none;
+}
+::-moz-scrollbar{
+    display: none;
+}
+.Button{
+    padding: 40px;
+    background-color: rgb(159, 114, 230);
+    color:black;
+    border-radius: 27px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    transition: 0.4s;
+}
+.Button:hover{
+    background-color: rgb(146, 31, 234);
+    transition-delay: 0.2s;
+}
