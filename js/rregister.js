@@ -21,7 +21,7 @@ function validate_name(username){
         alert("Name is required");
         return false;
     }
-    else if( /^[A-Z]+[a-zA-Z]*$/.test(username)==false){
+    else if( /^[A-za-zA-Z]+$/.test(username)==false){
         alert("Enter valid name");
         return false;
     }

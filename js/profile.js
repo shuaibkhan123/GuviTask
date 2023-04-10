@@ -25,7 +25,7 @@ function fname_validation(fname){
         alert("First Name should not be empty");
         return false;
     }
-    else if( /^[a-zA-Z]+$/.test(fname)==false){
+    else if( /^[A-za-zA-Z]+$/.test(fname)==false){
         alert("Enter a valid first name");
         return false;
     }
@@ -38,7 +38,7 @@ function lname_validation(lname){
         alert("Last Name should not be empty");
         return false;
     }
-    else if( /^[a-zA-Z]+$/.test(lname)==false){
+    else if( /^[A-za-zA-Z]+$/.test(lname)==false){
         alert("Enter a valid last name");
         return false;
     }
