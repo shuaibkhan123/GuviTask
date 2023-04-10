@@ -1,6 +1,6 @@
 function validate(fname,lname,dob,phone,email,state,degree,dept){
-let fname_flag=name_validation(fname);
-let lname_flag=name_validation(lname);
+let fname_flag=fname_validation(fname);
+let lname_flag=lname_validation(lname);
 let dob_flag=dob_validation(dob);
 let phone_flag=phone_validation(phone)
 let email_flag=email_validation(email)
@@ -20,22 +20,26 @@ else{
 }
 
 //validate Name
-function name_validation(fname){
+function fname_validation(fname){
     if(fname==""){
+        alert("First Name should not be empty");
         return false;
     }
-    else if( /^[a-zA-Z]+$/.test(fname)==false){
+    else if( /^[A-Z]+[a-zA-Z]*$/.test(fname)==false){
+        alert("Enter a valid first name");
         return false;
     }
     else{
         return true;
     }
 }
-function name_validation(lname){
+function lname_validation(lname){
     if(lname==""){
+        alert("Last Name should not be empty");
         return false;
     }
-    else if( /^[a-zA-Z]+$/.test(lname)==false){
+    else if( /^[A-Z]+[a-zA-Z]*$/.test(lname)==false){
+        alert("Enter a valid last name");
         return false;
     }
     else{
@@ -46,10 +50,11 @@ function name_validation(lname){
 //validate Phone
 function phone_validation(phone){
     if(phone==""){
+        alert("phone number can not be empty");
         return false;
         }
     else if(/^[0-9]+$/.test(phone)==false  || phone.length!=10){
-            alert("invalid mobile number")
+            alert("invalid mobile number");
             return false;
         }
     else{
@@ -60,9 +65,11 @@ function phone_validation(phone){
 //validate email
 function email_validation(email){
     if(email==""){
+        alert("email can not be empty");
         return false;             
     }
     else if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)==false){
+        alert("invalid email")
         return false;
     }
     else{
@@ -73,10 +80,11 @@ function email_validation(email){
 //Validate DOB
 function dob_validation(dob){
     if(!dob){
+        alert("choose your date of birth");
         return false;
     }
     else if(!(parseInt(dob.slice(0,4))>=1970 && parseInt(dob.slice(0,4))<=2010)){
-        alert("user must be born between 1970 and 2010");
+        alert("user must be born between 1970 and 2010 ");
         return false;
     }
     else{
@@ -87,6 +95,7 @@ function dob_validation(dob){
 //Validate state
 function validate_state(state){
     if(state==""){
+        alert("choose your state");
         return false;
     }
     else{
@@ -97,6 +106,7 @@ function validate_state(state){
 //validate Degree
 function validate_degree(degree){
     if(degree==""){
+        alert("choose your degree");
         return false;
     }
     else{
@@ -107,6 +117,7 @@ function validate_degree(degree){
 //Validate Department
 function validate_dept(dept){
     if(dept==""){
+        alert("choose your department");
         return false;
     }
     else{
