@@ -56,35 +56,27 @@ function phone_validation(phone){
         return true;
         }
 }
+
 //validate email
 function email_validation(email){
-    var flag=true;
     if(email==""){
-        document.getElementById("p4").innerHTML="Email is required";
-        flag=false;
         return false;             
     }
     else if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)==false){
-        document.getElementById("p4").innerHTML="invalid email";
-        flag=false;
         return false;
     }
     else{
-        document.getElementById("p4").innerHTML="";
         return true;
     }
 }
-
-
-
 
 //Validate DOB
 function dob_validation(dob){
     if(!dob){
         return false;
     }
-    else if(!(parseInt(dob.slice(0,4))>=1970 && parseInt(dob.slice(0,4))<=2005)){
-        alert("user must be born between 1970 and 2005");
+    else if(!(parseInt(dob.slice(0,4))>=1970 && parseInt(dob.slice(0,4))<=2010)){
+        alert("user must be born between 1970 and 2010");
         return false;
     }
     else{

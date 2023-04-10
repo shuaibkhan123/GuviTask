@@ -114,8 +114,8 @@ else
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $query=$conn->prepare('UPDATE registration SET `email`=?,`name`=? WHERE `id`=?');
-    $query->bind_param("ssi",$new_mail,$name,$userid);
+    $query=$conn->prepare('UPDATE registration SET `email`=?,`fname`=? WHERE `id`=?');
+    $query->bind_param("ssi",$new_mail,$fname,$userid);
     $query->execute();
 }
 ?>
