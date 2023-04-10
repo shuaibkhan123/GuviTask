@@ -56,6 +56,27 @@ function phone_validation(phone){
         return true;
         }
 }
+//validate email
+function email_validation(email){
+    var flag=true;
+    if(email==""){
+        document.getElementById("p4").innerHTML="Email is required";
+        flag=false;
+        return false;             
+    }
+    else if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)==false){
+        document.getElementById("p4").innerHTML="invalid email";
+        flag=false;
+        return false;
+    }
+    else{
+        document.getElementById("p4").innerHTML="";
+        return true;
+    }
+}
+
+
+
 
 //Validate DOB
 function dob_validation(dob){
@@ -172,17 +193,18 @@ $("#edit").click(function(){
 });
 
 $("#save").click(function(){
-    let fname=document.getElementById("firstName").value;
-    let lname=document.getElementById("lastNname").value;
-    let dob=document.getElementById("dob").value;
-    //let age=document.getElementById("age").value;
-    let phone=document.getElementById("phone").value;
-    let email=document.getElementById("email").value;
-    let state=document.getElementById("state").value;
-    let degree=document.getElementById("degree").value;
-    let dept=document.getElementById("dept").value;
+    let fname=$("#firstName").val();
+    let lname=$("#lastNname").val();
+    let dob=$("#dob").val();
+    //let age=$("#age").val();
+    let phone=$("#phone").val();
+    let email=$("#email").val();
+    let state=$("#state").val();
+    let degree=$("#degree").val();
+    let dept=$("#dept").val();
 
-    //console.log(dob.slice(0,4));
+    console.log(fname); 
+    console.log(dob.slice(0,4));
 
     if(validate(fname,lname,dob,phone,email,state,degree,dept)){
         document.getElementById("firstName").disabled=true;
