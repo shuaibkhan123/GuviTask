@@ -9,7 +9,7 @@
 }
 
 #particles-js{ 
-    height: 1000px;
+    height: 180vh;
     background-image: url('/GuviTask/assets/images/mainBack.jpg');
     background-repeat: no-repeat;
     background-size:100% 100%; 
